@@ -1,0 +1,43 @@
+#!/usr/bin/env bash
+
+# Install command-line tools using Homebrew.
+
+# Make sure we’re using the latest Homebrew.
+brew update
+
+# Upgrade any already-installed formulae.
+brew upgrade
+
+
+brewFormulae="git \
+    "
+
+brewCask="iterm2 \
+    visual-studio-code \
+    karabiner-elements \
+    paw \
+    sublime-text \
+    "
+
+printf "Installing homebrew stuff\n"
+brew install $brewFormulae
+brew install --cask $brewCask
+
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
+
+# Save Homebrew’s installed location.
+BREW_PREFIX=$(brew --prefix)
+
+# Install `wget` with IRI support.
+# brew install wget --with-iri
+
+# Install GnuPG to enable PGP-signing commits.
+# brew install gnupg
+
+# Install more recent versions of some macOS tools.
+# brew install vim --with-override-system-vi
+# brew install grep
+
+# Remove outdated versions from the cellar.
+brew cleanup

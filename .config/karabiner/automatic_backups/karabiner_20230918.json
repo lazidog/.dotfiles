@@ -18,17 +18,17 @@
                 },
                 "rules": [
                     {
-                        "description": "Change command + h/j/k/l to Arrows",
+                        "description": "Touch-typing arrows: [left ⌘ + jkil] to [◀ ▼ ▲ ▶]",
                         "manipulators": [
                             {
                                 "from": {
-                                    "key_code": "h",
+                                    "key_code": "j",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "left_command"
                                         ],
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -41,13 +41,13 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "j",
+                                    "key_code": "k",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "left_command"
                                         ],
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -60,13 +60,13 @@
                             },
                             {
                                 "from": {
-                                    "key_code": "k",
+                                    "key_code": "i",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "left_command"
                                         ],
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },
@@ -82,10 +82,10 @@
                                     "key_code": "l",
                                     "modifiers": {
                                         "mandatory": [
-                                            "command"
+                                            "left_command"
                                         ],
                                         "optional": [
-                                            "caps_lock"
+                                            "any"
                                         ]
                                     }
                                 },

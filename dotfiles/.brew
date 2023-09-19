@@ -11,6 +11,8 @@ brew upgrade
 
 brewFormulae="git \
     node \
+    neovim \
+    tmux \
     "
 
 brewCask="iterm2 \

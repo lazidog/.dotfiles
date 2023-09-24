@@ -19,7 +19,6 @@ module.exports = {
     logger: true,
     io: true,
   },
-  extends: ['airbnb', 'plugin:import/warnings'],
   rules: {
     'no-eval': 1,
     'no-const-assign': 'warn',

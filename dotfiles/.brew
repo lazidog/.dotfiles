@@ -13,6 +13,7 @@ brewFormulae="git \
     node \
     neovim \
     tmux \
+    ripgrep \
     "
 
 brewCask="iterm2 \

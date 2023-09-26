@@ -11,6 +11,8 @@ brew upgrade
 
 brewFormulae="git \
     node \
+    go \
+    python@3 \
     neovim \
     tmux \
     ripgrep \

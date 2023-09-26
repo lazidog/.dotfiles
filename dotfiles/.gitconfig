@@ -1,6 +1,6 @@
 [alias]
 
-	pshrm = "!f() { git remote add origin git@github.com:nvtien247/$1.git; git push -u origin main; }; f"
+	pshrm = "!f() { git remote add origin git@github.com:lazidog/$1.git; git push -u origin main; }; f"
 
 	# View abbreviated SHA, description, and history graph of the latest 20 commits.
 	l = log --pretty=oneline -n 20 --graph --abbrev-commit

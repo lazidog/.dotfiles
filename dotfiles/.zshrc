@@ -124,6 +124,8 @@ alias fgrep='fgrep --color=auto'
 alias cls='clear'
 
 # Shortcuts
+alias py="python3"
+alias vi="nvim"
 
 # List all files colorized in long format
 alias l="ls -F"

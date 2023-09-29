@@ -56,3 +56,9 @@ opt.path:append { '**' } -- Finding files - Search down into subfolders
 opt.inccommand = 'split'
 opt.wildignore:append { '*/node_modules/*' }
 opt.formatoptions:append { 'r' } -- Add asterisks in block comments
+
+vim.cmd [[
+  augroup JsonToJsonc
+    autocmd! FileType json set filetype=jsonc
+  augroup END
+]]

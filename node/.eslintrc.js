@@ -19,7 +19,7 @@ module.exports = {
     logger: true,
     io: true,
   },
-  extends: ['plugin:react/recommended'],
+  extends: ['plugin:import/warnings'],
   rules: {
     'no-eval': 1,
     'no-const-assign': 'warn',
@@ -61,8 +61,7 @@ module.exports = {
     'no-console': ['error', { allow: ['time', 'timeEnd', 'timeLog'] }],
     'arrow-parens': ['error', 'as-needed'],
     'import/extensions': [0, { js: 'always' }],
-
-    'react/react-in-jsx-scope': 'off',
+    'import/no-unresolved': [2, { commonjs: true, amd: true }],
   },
   settings: { 'import/resolver': { node: { extensions: ['.js', '.jsx'] } } },
 };

@@ -7,19 +7,22 @@ module.exports = {
     mocha: true,
     jest: true,
   },
+  parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-      experimentalObjectRestSpread: true,
-    },
-    ecmaVersion: 2020,
+    project: 'tsconfig.json',
     sourceType: 'module',
   },
   globals: {
     logger: true,
     io: true,
   },
-  extends: ['plugin:import/warnings'],
+  plugins: ['@typescript-eslint/eslint-plugin'],
+  extends: [
+    'plugin:import/warnings',
+    'plugin:@typescript-eslint/eslint-recommended',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+  ],
   rules: {
     'no-eval': 1,
     'no-const-assign': 'warn',
@@ -55,13 +58,15 @@ module.exports = {
       'error',
       { ExportDeclaration: { multiline: true, minProperties: 4 } },
     ],
-    'react/prop-types': 'off',
-    'react/destructuring-assignment': 'off',
     'import/prefer-default-export': 'off',
     'no-console': ['error', { allow: ['time', 'timeEnd', 'timeLog'] }],
     'arrow-parens': ['error', 'as-needed'],
     'import/extensions': [0, { js: 'always' }],
     'import/no-unresolved': [2, { commonjs: true, amd: true }],
+
+    '@typescript-eslint/interface-name-prefix': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
   },
   settings: { 'import/resolver': { node: { extensions: ['.js', '.jsx'] } } },
 };

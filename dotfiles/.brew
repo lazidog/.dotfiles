@@ -10,18 +10,16 @@ brew upgrade
 
 
 brewFormulae="git \
-    node \
-    go \
     python@3 \
     neovim \
     tmux \
     ripgrep \
+    direnv \
     "
 
 brewCask="iterm2 \
     visual-studio-code \
     karabiner-elements \
-    paw \
     sublime-text \
     "
 

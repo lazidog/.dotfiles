@@ -136,3 +136,13 @@
 [user]
 	name = lazidog
 	email = nvtien247@gmail.com
+
+[includeIf "gitdir:~/Company/dungbui2/"]
+path = ~/Company/dungbui2/.gitconfig.dungbui2
+
+[includeIf "gitdir:~/Company/kientrinh/"]
+path = ~/Company/kientrinh/.gitconfig.kientrinh
+
+
+[includeIf "gitdir:~/Company/thatera/"]
+path = ~/Company/thatera/.gitconfig.thatera

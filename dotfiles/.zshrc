@@ -170,17 +170,8 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-
+export PATH="/usr/local/bin:$PATH"
 export NODE_PATH='/usr/local/lib/node_modules'
-
-# setup android env for mobile dev
-export ANDROID_HOME=/Users/$USER/Library/Android/sdk
-export ANDROID_SDK_ROOT=$HOME/Library/Android/sdk
-export PATH=$ANDROID_HOME/platform-tools:$PATH
-export PATH=$ANDROID_HOME/platforms:$PATH
-export PATH=$ANDROID_HOME/tools:$PATH
-export PATH=$ANDROID_HOME/tools/bin:$PATH
-export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$PATH
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

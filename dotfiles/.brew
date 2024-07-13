@@ -15,6 +15,7 @@ brewFormulae="git \
     tmux \
     ripgrep \
     direnv \
+    node \
     "
 
 brewCask="iterm2 \

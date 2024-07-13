@@ -1,17 +1,55 @@
 {
-    "workbench.colorTheme": "Default Dark Modern",
-    "terminal.integrated.fontFamily": "MesloLGS NF",
-    "git.terminalAuthentication": false,
-    "editor.suggestSelection": "first",
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-    "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": true
-    },
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.startupEditor": "none",
-    "git.confirmSync": false,
-    "[markdown]": {
-        "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    }
+  "workbench.colorTheme": "Default Dark Modern",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "git.terminalAuthentication": false,
+  "editor.suggestSelection": "first",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.startupEditor": "none",
+  "git.confirmSync": false,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vsicons.dontShowNewVersionMessage": true,
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "files.associations": {
+    "*.json": "jsonc"
+  },
+  "git.autofetch": true,
+  "markdownlint.config": {
+    "MD024": false,
+    "MD040": false,
+    "MD033": false,
+    "MD051": false
+  },
+  "diffEditor.ignoreTrimWhitespace": false,
+  "redhat.telemetry.enabled": false,
+  "colorize.languages": [
+    "javascript",
+    "typescript",
+    "css",
+    "sass",
+    "scss",
+    "less",
+    "postcss",
+    "sss",
+    "stylus",
+    "xml",
+    "svg"
+  ],
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

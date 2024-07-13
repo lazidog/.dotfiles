@@ -112,7 +112,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ......="cd ../../../..."
+alias ......="cd ../../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
@@ -173,9 +173,54 @@ alias path='echo -e ${PATH//:/\\n}'
 export PATH="/usr/local/bin:$PATH"
 export NODE_PATH='/usr/local/lib/node_modules'
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
 # reading direnv
 eval "$(direnv hook zsh)"
+
+
+
+if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
+  sessions=$(tmux list-sessions -F "#{session_name}" 2>/dev/null)
+  if [ -n "$sessions" ]; then
+      echo "sessions created"
+  else   
+    tmux new-session -qqd -s home
+    tmux send-keys -t home 'cd ~' C-m
+    tmux new-window -t home:1 -n "home"
+
+    tmux new-session -d -s digdig
+    tmux send-keys -t digdig 'cd ~/Company/thatera/digdig' C-m
+    tmux new-window -t digdig:1 -n "admin"
+    tmux send-keys -t digdig 'cd ~/Company/thatera/digdig/apps/admin' C-m
+    tmux new-window -t digdig:2 -n "seller"
+    tmux send-keys -t digdig 'cd ~/Company/thatera/digdig/apps/seller' C-m
+    tmux new-window -t digdig:3 -n "app-proxy"
+    tmux send-keys -t digdig 'cd ~/Company/thatera/digdig/apps/app-proxy' C-m
+    tmux new-window -t digdig:4 -n "crust"
+    tmux send-keys -t digdig 'cd ~/Company/thatera/digdig/apps/crust' C-m
+    tmux new-window -t digdig:5 -n "image-proxy"
+    tmux send-keys -t digdig 'cd ~/Company/thatera/digdig/apps/image-proxy' C-m
+    tmux new-window -t digdig:6 -n "satella"
+    tmux send-keys -t digdig 'cd ~/Company/thatera/digdig/apps/satella' C-m
+    tmux new-window -t digdig:7 -n "app"
+    tmux send-keys -t digdig 'cd ~/Company/thatera/digdig/apps/app' C-m
+
+    tmux new-session -d -s digdig-theme
+    tmux send-keys -t digdig-theme 'cd ~/Company/thatera/digdig-theme' C-m
+    tmux new-window -t digdig-theme:1 -n "theme"
+    tmux send-keys -t digdig-theme 'cd ~/Company/thatera/digdig-theme' C-m
+    tmux new-window -t digdig-theme:2 -n "frontend"
+    tmux send-keys -t digdig-theme 'cd ~/Company/thatera/digdig-theme/packages/frontend' C-m
+
+    tmux new-session -d -s expose
+    tmux send-keys -t expose 'cd ~' C-m
+    tmux new-window -t expose:1 -n "app-proxy"
+    tmux new-window -t expose:2 -n "crust"
+
+    tmux new-session -d -s next-monorepo-boilerplate
+    tmux send-keys -t next-monorepo-boilerplate 'cd ~/Company/nvtien/next-monorepo-boilerplate' C-m
+    tmux new-window -t next-monorepo-boilerplate:1 -n "root"
+    tmux send-keys -t next-monorepo-boilerplate 'cd ~/Company/nvtien/next-monorepo-boilerplate' C-m
+
+    tmux source-file ~/.config/tmux/.tmux.conf
+  fi
+fi

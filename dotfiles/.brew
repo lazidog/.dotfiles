@@ -46,3 +46,27 @@ BREW_PREFIX=$(brew --prefix)
 
 # Remove outdated versions from the cellar.
 brew cleanup
+
+# brew list
+# ==> Formulae
+# aom                     freetype                libpq                   mpdecimal               ripgrep
+# apr                     gd                      libsodium               msgpack                 rtmpdump
+# apr-util                gettext                 libssh2                 ncurses                 ruby
+# argon2                  gh                      libtermkey              neovim                  shopify-cli
+# autoconf                giflib                  libtiff                 net-snmp                sqlite
+# awscli                  git                     libtool                 node                    supabase
+# bash                    gmp                     libunistring            nspr                    terminal-notifier
+# brotli                  highway                 libuv                   nss                     terraform
+# c-ares                  icu4c@76                libvmaf                 oniguruma               tidy-html5
+# ca-certificates         imath                   libvterm                openexr                 tmux
+# cffi                    jpeg-turbo              libyaml                 openldap                tree
+# cocoapods               jpeg-xl                 libzip                  openssl@3               tree-sitter
+# cryptography            krb5                    little-cms2             pcre2                   unibilium
+# curl                    libavif                 luajit                  php                     unixodbc
+# direnv                  libdeflate              luv                     pycparser               utf8proc
+# fastlane                libevent                lz4                     python@3.11             webp
+# fontconfig              libnghttp2              m4                      python@3.12             xz
+# freetds                 libpng                  mkcert                  readline                zstd
+
+# ==> Casks
+# font-hack-nerd-font     iterm2                  karabiner-elements      ngrok                   visual-studio-code

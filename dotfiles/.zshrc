@@ -216,11 +216,54 @@ if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
     tmux new-window -t expose:1 -n "app-proxy"
     tmux new-window -t expose:2 -n "crust"
 
-    tmux new-session -d -s next-monorepo-boilerplate
-    tmux send-keys -t next-monorepo-boilerplate 'cd ~/Company/nvtien/next-monorepo-boilerplate' C-m
-    tmux new-window -t next-monorepo-boilerplate:1 -n "root"
-    tmux send-keys -t next-monorepo-boilerplate 'cd ~/Company/nvtien/next-monorepo-boilerplate' C-m
+    tmux new-session -d -s pnpm-monorepo-boilerplate
+    tmux send-keys -t pnpm-monorepo-boilerplate 'cd ~/Workspace/pnpm-monorepo-boilerplate' C-m
+    tmux new-window -t pnpm-monorepo-boilerplate:1 -n "root"
+    tmux send-keys -t pnpm-monorepo-boilerplate 'cd ~/Workspace/pnpm-monorepo-boilerplate' C-m
+
+    tmux new-session -d -s react-native-boilerplate
+    tmux send-keys -t react-native-boilerplate 'cd ~/Workspace/react-native-boilerplate' C-m
+    tmux new-window -t react-native-boilerplate:1 -n "root"
+    tmux send-keys -t react-native-boilerplate 'cd ~/Workspace/react-native-boilerplate' C-m
+
+    tmux new-session -d -s react-boilerplate
+    tmux send-keys -t react-boilerplate 'cd ~/Workspace/react-boilerplate' C-m
+    tmux new-window -t react-boilerplate:1 -n "root"
+    tmux send-keys -t react-boilerplate 'cd ~/Workspace/react-boilerplate' C-m
+
+    tmux new-session -d -s nest-boilerplate
+    tmux send-keys -t nest-boilerplate 'cd ~/Workspace/nest-boilerplate' C-m
+    tmux new-window -t nest-boilerplate:1 -n "root"
+    tmux send-keys -t nest-boilerplate 'cd ~/Workspace/nest-boilerplate' C-m
+
+    tmux new-session -d -s lazizone 
+    tmux send-keys -t lazizone 'cd ~/Workspace/lazizone' C-m
+    tmux new-window -t lazizone:1 -n "console"
+    tmux send-keys -t lazizone 'cd ~/Workspace/lazizone' C-m
+    tmux new-window -t lazizone:2 -n "app"
+    tmux send-keys -t lazizone 'cd ~/Workspace/lazizone' C-m
+    tmux new-window -t lazizone:3 -n "web"
+    tmux send-keys -t lazizone 'cd ~/Workspace/lazizone' C-m
+    tmux new-window -t lazizone:4 -n "graphql"
+    tmux send-keys -t lazizone 'cd ~/Workspace/lazizone' C-m
+    tmux new-window -t lazizone:5 -n "rest"
+    tmux send-keys -t lazizone 'cd ~/Workspace/lazizone' C-m
+    tmux new-window -t lazizone:6 -n "socket"
+    tmux send-keys -t lazizone 'cd ~/Workspace/lazizone' C-m
+    tmux new-window -t lazizone:7 -n "db"
+    tmux send-keys -t lazizone 'cd ~/Workspace/lazizone' C-m
 
     tmux source-file ~/.config/tmux/.tmux.conf
   fi
 fi
+
+
+export LANG="en_US.UTF-8"
+
+alias gitingest='~/Library/Python/3.9/bin/gitingest'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/lazidog/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/lazidog/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/lazidog/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/lazidog/google-cloud-sdk/completion.zsh.inc'; fi

@@ -139,3 +139,6 @@
 
 [includeIf "gitdir:~/Company/thatera/"]
 path = ~/Company/thatera/.gitconfig.thatera
+
+[includeIf "gitdir:~/Company/ncc/"]
+path = ~/Company/ncc/.gitconfig.ncc

@@ -136,6 +136,13 @@
 [user]
 	name = lazidog
 	email = nvtien247@gmail.com
+ 
+[github]
+	user = "lazidog"
+ 
+[core]
+	sshCommand = "ssh -i ~/.ssh/id_ed25519"
+
 
 [includeIf "gitdir:~/Company/thatera/"]
 path = ~/Company/thatera/.gitconfig.thatera

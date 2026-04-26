@@ -16,12 +16,18 @@ brewFormulae="git \
     ripgrep \
     direnv \
     node \
+    gh \
+    awscli \
+    supabase \
+    terraform \
+    shopify-cli \
     "
 
 brewCask="iterm2 \
     visual-studio-code \
     karabiner-elements \
     sublime-text \
+    ngrok \
     "
 
 printf "Installing homebrew stuff\n"

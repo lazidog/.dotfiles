@@ -6,7 +6,7 @@ function setup() {
 
 	export PATH=/opt/homebrew/bin:$PATH
 
-	bash ~/.dotfiles/dotfiles/brew.sh
+	bash ~/.dotfiles/dotfiles/.brew
 
 	ln -sf ~/.dotfiles/dotfiles/.zprofile ~/.zprofile
 	ln -sf ~/.dotfiles/dotfiles/.vimrc ~/.vimrc
@@ -28,6 +28,8 @@ function setup() {
 	# fi
 	# ln -s "$PWD/config/" $configDir
 	rsync -a --no-perms ./.config/ ~/.config;
+
+	bash ~/.dotfiles/node/run.sh
 }
 
 if [ "$1" == "--force" -o "$1" == "-f" ]; then

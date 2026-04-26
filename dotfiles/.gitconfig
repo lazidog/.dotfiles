@@ -149,3 +149,9 @@ path = ~/Company/thatera/.gitconfig.thatera
 
 [includeIf "gitdir:~/Company/ncc/"]
 path = ~/Company/ncc/.gitconfig.ncc
+
+[includeIf "gitdir:~/Company/timournguyen-tech/"]
+path = ~/Company/timournguyen-tech/.gitconfig.timournguyen-tech
+
+[pull]
+	rebase = false
